@@ -234,5 +234,3 @@ async function delaygreet(name) {
 }
 
 delaygreet("Dinesh")
-
-4. Event emitter
