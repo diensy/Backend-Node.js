@@ -1,0 +1,50 @@
+# Dependencies
+# (Never commit node_modules; it's too heavy and can be re-installed via package.json)
+node_modules/
+
+# Environment variables
+# (CRITICAL: Never commit these files as they hold passwords/keys)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+*.log
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like Jest
+coverage/
+*.lcov
+
+# Build directories (if you eventually use TypeScript or Babel)
+dist/
+build/
+
+# Editor directories and files
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS generated files (Mac and Windows junk)
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
