@@ -62,13 +62,17 @@ app.post('/add', (req, res) => {
 // Delete a book 
 
 app.delete('/delete/:id', (req, res) => {
-    const bookbyId = book.find(item => item.id == req.params.id);
-    if (bookbyId) {
-        book.pop(bookbyId);
+    const bookbyId = book.findIndex(item => item.id == req.params.id);
+    if (bookbyId !== -1) {
+        const deletedBook = book.splice(
+            bookbyId,
+            1
+        );
         res.status(200).json({
             message: 'Book deleted sucessfully',
-            data: bookbyId
+            data: deletedBook[0]
         })
+
     } else {
         res.status(404).json({
             message: 'Book not found'
